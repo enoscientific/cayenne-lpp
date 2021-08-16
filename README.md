@@ -1,8 +1,13 @@
-# bme280
-ESP-IDF Bosch BME280 Driver
-BME280 v3.5.0
+## A Cayenne LPP library written in C
 
-Just the BME280 driver  organized as a ESP-IDF component.
+This library provides functions for generating Cayenne LPP compatible payload.
+For example, the generated payloads can be used with LoRaWAN devices.
+
+## Source Driver Repository
+
+Currently, this component clones this repo https://aabadie.github.io/cayenne-lpp and sets it up as a ESP-IDF component.
+
+## Usage
 
 To use, git clone/submodule to `components` directory.
 
@@ -14,11 +19,11 @@ include(FetchContent)
 
 
 FetchContent_Declare(
-  bme280
-  GIT_REPOSITORY https://github.com/enoscientific/bme280.git
+  cayenne
+  GIT_REPOSITORY https://github.com/enoscientific/cayenne-lpp.git
 )
 
-FetchContent_MakeAvailable(bme280)
-set(EXTRA_COMPONENT_DIRS ${bme280_SOURCE_DIR}/components)
+FetchContent_MakeAvailable(cayenne)
+set(EXTRA_COMPONENT_DIRS ${cayenne_SOURCE_DIR}/components)
 
 ```
